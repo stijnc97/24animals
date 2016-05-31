@@ -1,0 +1,344 @@
+@font-face {
+    font-family: broodtekst;
+    src: url(msyi.ttf);
+}
+@font-face {
+    font-family: logotekst;
+    src: url(Nazare.otf);
+}
+html, body{
+    height: 100%;
+}
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+body{
+  font-family: broodtekst;
+  background-image: url(achtergrond.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+a{
+  text-decoration: none;
+  color: rgba(1, 2, 3, 0.5);
+  font-size: 1.3rem;
+  font-weight:900;
+  padding: 2.5%;
+}
+li{
+  display: inline;
+  font-size: 1.3rem;
+}
+li:nth-child(3){
+  margin: 0rem 0rem 0rem 4rem;
+}
+h1{
+  font-family: logotekst;
+  font-size: 2rem;
+  color: white;
+  position: absolute;;
+  top: 23%;
+  left: 45.5%;
+}
+h2{
+  font-family: logotekst;
+  font-size: 2rem;
+  color: white;
+  position: absolute;;
+  top: 50%;
+  left: 45%;
+}
+h3{
+  color: rgb(87, 175, 61);
+  font-family: broodtekst;
+  font-size: 1.5rem;
+  font-weight:900;
+  text-align: center;
+  margin: 2% 0% 1% 0%;
+}
+h4{
+  color: rgb(87, 175, 61);
+  font-family: broodtekst;
+  font-size: 1.2rem;
+  font-weight:900;
+  margin-right: 3%;
+}
+p{
+  margin: 0.5% 5%;
+  font-size: 1.2rem;
+}
+input{
+  display: block;
+  width: 22rem;
+  background-color: rgb(170, 214, 160);
+  border: none;
+  color: white;
+  padding: 0.2rem;
+}
+form{
+    margin-left: 50%;
+}
+::-webkit-input-placeholder{
+  color: rgba(255,255,255,0.5)
+}
+button{
+  margin: 1rem 0rem 5rem;
+  background-color: rgb(170, 214, 160);
+  border: none;
+  padding: 1rem;
+}
+.geselecteerd{
+  padding: 1.8%;
+  box-shadow: 0rem 0.1rem 0rem rgba(3,3,4,0.3);
+  background-color: rgba(3, 3, 4, 0.15);
+}
+.onzichtbaar{
+  display: none
+}
+.landingpage{
+  background-color: rgb(170, 214, 160);
+  width: 100%;
+  max-height: 8rem;
+  padding: 23.5% 0%;
+}
+.overgang{
+  background-color: rgb(79, 180, 165);
+  -webkit-animation:fadeout 2s;
+  opacity: 0;
+}
+.fadein{
+  -webkit-animation:fadein 4s;
+  opacity: 1;
+}
+.navigatie{
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  width: 60%;
+  background-color: rgb(168, 215, 158);
+  padding: 1%;
+}
+.info{
+  background-color: rgb(221, 235, 210);
+  width: 60%;
+  border: 0.1rem solid rgba(221, 235, 210, 0.9);
+  position: absolute;
+  left:20%;
+  top: 35%;
+  padding-bottom: 5%;
+}
+.circle:after{
+  position: fixed;
+  top: 23%;
+  left: 44%;
+  content: '';
+  background: trasparent;
+  width:12vw;
+  height: 12vw;
+  border-radius: 100%;
+  box-shadow: rgb(255, 255, 255) -4px -5px 3px -3px;
+  animation: rotate 2s infinite linear;
+}
+.beschrijving{
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 25%;
+  top: 60%;
+  width: 50%;
+  text-align: center;
+}
+.wegbeschrijvingen{
+  margin-left:5rem;
+}
+.mapknop{
+  position: absolute;
+  top: 37%;
+  left: 38%;
+  z-index: 0;
+  width: 5rem;
+  height: 5rem;
+  background: trasparent;
+}
+#logo{
+ transition: all 1.5s;
+ width: 10%;
+ position: absolute;;
+ top: 5%;
+ left: 40%;
+ z-index: 1;
+}
+#logo:hover{
+ transform: scale(1.2);
+}
+#logoload{
+  transition: all 1.5s;
+  width: 10%;
+  position: absolute;
+  top: 24%;
+  left: 44%;
+  z-index: 1;
+}
+#onzichtbaar{
+  display: none;
+}
+#uitleg{
+  margin: 0%;
+}
+#map{
+  width: 100%;
+  z-index: 1;
+}
+#spotbox{
+  width: 50%;
+  margin: 2vw 15vw;
+}
+#bericht{
+    width: 22rem;
+    display: block;
+    background-color: rgb(170, 214, 160);
+    border: none;
+    color: white;
+    padding: 0.2rem;
+}
+#gras{
+  width: 100%;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0vw;
+}
+#verstuurd{
+  margin-left: 8rem;
+}
+@-webkit-keyframes fadeout {
+from {opacity:1;}to {opacity:0;}
+}
+@-webkit-keyframes fadein {
+from {opacity:0;}to {opacity:1;}
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@media (min-device-width:600px) {
+  .info{
+    left: 10%;
+    width: 80%;
+  }
+  .navigatie{
+    left: 0%;
+    width: 100%;
+  }
+  .geselecteerd{
+    padding: 1.9%;
+  }
+  .wegbeschrijvingen{
+    margin-left:1rem;
+  }
+  form{
+    margin-left: 10%;
+  }
+  input, #bericht{
+    width: 12rem;
+  }
+  a{
+    font-size: 0.9rem;
+  }
+  li:nth-child(3){
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  #logo{
+    left: 50%;
+  }
+}
+@media (min-device-width:800px) {
+  .info{
+    left: 10%;
+    width: 80%;
+  }
+  .navigatie{
+    left: 10%;
+    width: 80%;
+  }
+  form{
+    margin-left: 20%;
+  }
+  input, #bericht{
+    width: 18rem;
+  }
+  a{
+    font-size: 0.9rem;
+  }
+  li:nth-child(3){
+    margin-left: 10rem;
+  }
+  h1{
+    left: 40%;
+  }
+  #logo{
+    left: 45%;
+  }
+}
+@media (min-device-width:1000px) {
+  .info{
+    left: 10%;
+    width: 80%;
+  }
+  .navigatie{
+    left: 10%;
+    width: 80%;
+    padding: 1rem
+  }
+  a{
+    font-size: 1.4rem;
+  }
+  form{
+    margin-left: 30%;
+  }
+  input, #bericht{
+    width: 24rem;
+  }
+  h1{
+    top: 25%;
+    left: 45%;
+  }
+  #logo{
+    left: 45%;
+  }
+}
+@media (min-device-width:1100px) {
+  .info{
+    top: 45%;
+    left: 10%;
+    width: 80%;
+  }
+  .navigatie{
+    left: 10%;
+    width: 80%;
+    padding: 1.2rem
+  }
+  a{
+    font-size: 1.5rem;
+  }
+  form{
+    margin-left: 30%;
+  }
+  input, #bericht{
+    width: 24rem;
+  }
+  li:nth-child(3){
+    margin-left: 15rem;
+  }
+  h1{
+    top: 30%;
+    left: 45%;
+  }
+  #logo{
+    left: 45%;
+  }
+}
